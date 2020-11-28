@@ -1,0 +1,38 @@
+.container-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-button {
+  background: var(--color-menu);
+  padding: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  outline: var(--color-menu);
+  color: var(--color-dark);
+
+  .nav-icon {
+    margin-right: 4px;
+  }
+
+  .nav-text {
+    font: var(--font-text);
+    font-weight: 700;
+  }
+}

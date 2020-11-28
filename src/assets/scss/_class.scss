@@ -1,0 +1,7 @@
+.padding-top-64 {
+  padding-top: 64px;
+
+  @media screen and (max-width: 599px) {
+    padding-top: 56px;
+  }
+}
