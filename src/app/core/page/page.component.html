@@ -2,7 +2,7 @@
 <mat-sidenav-container>
 
   <mat-sidenav #sidenav class="nav-list">
-    <app-menu></app-menu>
+    <app-menu (openMenu)="sidenav.toggle()"></app-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
