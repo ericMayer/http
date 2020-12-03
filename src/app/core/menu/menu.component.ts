@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 
 import { Menu } from '../../shared/interfaces/menu.interface';
 import { MenuService } from '../../shared/services/menu.service';
@@ -9,6 +9,8 @@ import { MenuService } from '../../shared/services/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+
+  @Output() openMenu: EventEmitter<boolean> = new EventEmitter();
 
   public menu: Menu[];
 

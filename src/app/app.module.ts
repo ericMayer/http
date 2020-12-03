@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CursosComponent } from './cursos/cursos.component';
 import { HeaderComponent } from './core/header/header.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { SharedModule } from './shared/modules/shared.module';
@@ -15,7 +14,6 @@ import { PageComponent } from './core/page/page.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    CursosComponent,
     PageComponent,
     HeaderComponent
   ],
@@ -26,7 +24,6 @@ import { PageComponent } from './core/page/page.component';
     SharedModule,
     MaterialModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,13 @@
+<mat-card class="card-cursos">
+  <div class="card-header">
+    <p class="curso-nome"> {{ curso?.nome }} </p>
+    <p class="curso-descricao"> {{ curso?.descricao | reduceText : 100 }}</p>
+  </div>
+
+  <div class="card-content"></div>
+
+  <div class="card-actions">
+    <mat-icon class="edit"> edit </mat-icon>
+    <mat-icon class="delete"> delete </mat-icon>
+  </div>
+</mat-card>
