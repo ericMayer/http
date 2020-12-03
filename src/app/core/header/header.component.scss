@@ -16,12 +16,12 @@
 }
 
 .nav-button {
+  width: 100%;
   background: var(--color-menu);
   padding: 20px;
   border: none;
   display: flex;
   align-items: center;
-  cursor: pointer;
   position: absolute;
   z-index: 10;
   outline: var(--color-menu);
@@ -32,6 +32,17 @@
   }
 
   .nav-text {
+    font: var(--font-text);
+    font-weight: 700;
+  }
+}
+
+.container-title {
+  display: flex;
+  background: var(--color-blue);
+
+  .title-page {
+    margin: 10px auto 0 auto;
     font: var(--font-text);
     font-weight: 700;
   }

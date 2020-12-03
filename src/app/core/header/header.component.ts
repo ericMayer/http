@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,21 @@ export class HeaderComponent implements OnInit {
 
   @Output() openMenu: EventEmitter<boolean> = new EventEmitter();
 
-  constructor() { }
+  public titlePage: string;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.getTitlePage();
+  }
+
+  public getTitlePage(): void {
+    this.router.events.forEach((event) => {
+      if (event instanceof ActivationEnd && event.snapshot.component && event.snapshot.data.titlePage) 
+        this.titlePage = event.snapshot.data.titlePage;    
+    });
   }
 
 }

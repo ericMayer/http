@@ -1,0 +1,42 @@
+:host {
+  .card-cursos {
+    margin-bottom: 20px;
+    width: 320px;
+    height: 190px;
+    margin-right: 20px;
+  }
+}
+
+.card-cursos {
+  position: relative;
+}
+
+.card-header {
+  margin-top: 10px !important;
+  .curso-nome {
+    margin-bottom: 15px;
+    font: var(--font-text);
+    color: var(--color-dark);
+    font-weight: 700;
+  }
+
+  .curso-descricao {
+    color: var(--color-dark);
+  }
+}
+
+.card-actions {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+
+  .edit {
+    cursor: pointer;
+    color: var(--color-blue);
+  }
+
+  .delete {
+    cursor: pointer;
+    color: var(--color-red);
+  }
+}

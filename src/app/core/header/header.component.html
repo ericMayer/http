@@ -1,10 +1,14 @@
 <nav class="nav">
-  <mat-toolbar class="nav-button">
+  <mat-toolbar-row class="nav-button">
     <div class="container-header" (click)="openMenu.emit()">
       <mat-icon class="nav-icon">
         menu
       </mat-icon>
       <p class="nav-text">Menu</p>
     </div>
-  </mat-toolbar>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="padding-top container-title" *ngIf="titlePage">
+    <div class="title-page"> {{ titlePage }} </div>
+  </mat-toolbar-row>
 </nav>
