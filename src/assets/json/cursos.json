@@ -44,7 +44,7 @@
     {
       "id": "5",
       "nome": "Angular 2+",
-      "descricao": "Aprenda a utilizar o framework Angular 2+ para criar SPA - Single Page Application. \\n Será ensinado desde o básico até o intermediário, no curso será utilizado o Material Design e outras libs para apresentação que podem ser usadas para facilitar o desenvolimento das aplicações no cotidiano.",
+      "descricao": "Aprenda a utilizar o framework Angular 2+ para criar SPA - Single Page Application. \n Será ensinado desde o básico até o intermediário, no curso será utilizado o Material Design e outras libs para apresentação que podem ser usadas para facilitar o desenvolimento das aplicações no cotidiano.",
       "preRequisitos": [
         {
           "id": "1"
