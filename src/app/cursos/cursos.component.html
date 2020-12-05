@@ -1,5 +1,5 @@
 <div class="padding-top"></div>
 
 <div class="container">
-  <app-card-cursos *ngFor="let curso of cursos" [curso]="curso"></app-card-cursos>
+  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso"></app-card-cursos>
 </div>

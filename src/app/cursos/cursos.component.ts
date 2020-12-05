@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Curso } from '../shared/interfaces/curso.interface';
 
 import { CursosService } from '../shared/services/cursos.service';
@@ -8,13 +9,13 @@ import { CursosService } from '../shared/services/cursos.service';
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.scss']
 })
-export class CursosComponent implements OnInit {  
+export class CursosComponent implements OnInit {
 
-  public cursos: Curso[];
+  public cursos: Observable<Curso[]>;
 
   constructor(
     private cursosService: CursosService
-  ) { 
+  ) {
   }
 
   ngOnInit(): void {
@@ -22,7 +23,6 @@ export class CursosComponent implements OnInit {
   }
 
   public getCursos(): void {
-    this.cursosService.getCursos()
-      .subscribe((cursos: Curso[]) => this.cursos = cursos);
+    this.cursos = this.cursosService.getCursos();
   }
 }
