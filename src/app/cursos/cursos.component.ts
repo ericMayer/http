@@ -5,7 +5,7 @@ import { EmptyObservable } from 'rxjs/observable/EmptyObservable';
 
 import { Curso } from '../shared/interfaces/curso.interface';
 import { CursosService } from '../shared/services/cursos.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MessageModalService } from '../shared/services/message-modal.service';
 
 @Component({
   selector: 'app-cursos',
@@ -19,7 +19,7 @@ export class CursosComponent implements OnInit {
 
   constructor(
     private cursosService: CursosService,
-    private snackBar: MatSnackBar
+    private messageModalService: MessageModalService
   ) {
   }
 
@@ -31,19 +31,9 @@ export class CursosComponent implements OnInit {
     this.cursos = this.cursosService.getCursos()
       .pipe(
         catchError(() => {
-          this.openModalError();
+          this.messageModalService.openModalError('Ocorreu um erro ao carregar os cursos, por favor tente novamente mais tarde.');
           return new EmptyObservable<Curso[]>();
         })
       );
   }
-
-  public openModalError(): void {
-    this.snackBar.open('Ocorreu um erro ao carregar os cursos, por favor tente novamente mais tarde.', 'Fechar', {
-      panelClass: 'snack-bar',
-      verticalPosition: 'top',
-      duration: 5000,
-    });
-  }
-
-
 }
