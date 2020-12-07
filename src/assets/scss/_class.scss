@@ -13,3 +13,20 @@
     margin: 20px;
   }
 }
+
+.snack-bar {
+  margin-top: 200px !important;
+  background: var(--color-red);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
