@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output} from '@angular/core';
+import { take } from 'rxjs/operators';
 
 import { Menu } from '../../shared/interfaces/menu.interface';
 import { MenuService } from '../../shared/services/menu.service';
@@ -25,6 +26,8 @@ export class MenuComponent {
   }
 
   public getMenu(): void {
-    this.menuService.getMenu().subscribe((menu: Menu[]) => this.menu = menu);
+    this.menuService.getMenu()
+      .pipe(take(1))
+      .subscribe((menu: Menu[]) => this.menu = menu);
   }
 }
