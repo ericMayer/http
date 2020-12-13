@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Curso } from '../../shared/interfaces/curso.interface';
 
 @Component({
@@ -9,4 +9,11 @@ import { Curso } from '../../shared/interfaces/curso.interface';
 export class CardCursosComponent {
 
   @Input() curso: Curso;
+  @Output() editarCurso: EventEmitter<string> = new EventEmitter();
+
+
+  public editar(id: String): void {
+    if (id) this.editarCurso.emit(`cursos/editar-curso/${id}`)
+  }
+
 }

@@ -16,4 +16,8 @@ export class CursosService {
     return this.http.get('cursos');
   }
 
+  public getCursoById(idCurso: string): Observable<Curso> {
+    if (idCurso) return this.http.get(`cursos/${idCurso}`);
+  }
+
 }

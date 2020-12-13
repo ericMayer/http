@@ -1,14 +1,22 @@
 <nav class="nav">
   <mat-toolbar-row class="nav-button">
-    <div class="container-header" (click)="openMenu.emit()">
-      <mat-icon class="nav-icon">
-        menu
-      </mat-icon>
-      <p class="nav-text">Menu</p>
-    </div>
-  </mat-toolbar-row>
+    <div class="container-header">
+      <div *ngIf="showMenu; else showArrowBack" (click)="openMenu.emit()">
+        <mat-icon class="nav-icon">
+          {{ icon }}
+        </mat-icon>
+        <p class="nav-text"> {{ text }}</p>
+      </div>
 
-  <mat-toolbar-row class="padding-top container-title" *ngIf="titlePage">
-    <div class="title-page"> {{ titlePage }} </div>
+      <ng-template #showArrowBack>
+        <div (click)="back()">
+          <mat-icon class="nav-icon">
+            {{ icon }}
+          </mat-icon>
+          <p class="nav-text"> {{ text }}</p>
+        </div>
+      </ng-template>
+    </div>
+
   </mat-toolbar-row>
 </nav>

@@ -5,11 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+import { NgxMaskModule } from 'ngx-mask';
+import { NgxCurrencyModule } from "ngx-currency";
+
 import { ReduceTextPipe } from '../pipes/reduceText.pipe';
+
+import { CustomInputComponent } from '../components/custom-input/custom-input.component';
+import { CustomTextareaComponent } from '../components/custom-textarea/custom-textarea.component';
 
 
 @NgModule({
   declarations: [
+    CustomInputComponent,
+    CustomTextareaComponent,
     ReduceTextPipe
   ],
   imports: [
@@ -18,9 +26,14 @@ import { ReduceTextPipe } from '../pipes/reduceText.pipe';
     FormsModule,
     HttpClientModule,
     RouterModule,
+    NgxCurrencyModule,
+    NgxMaskModule.forRoot()
   ],
   exports: [
-    ReduceTextPipe
+    CustomInputComponent,
+    CustomTextareaComponent,
+    ReduceTextPipe,
+    NgxCurrencyModule
   ]
 })
 export class SharedModule { }

@@ -4,7 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageComponent } from './core/page/page.component';
 
 const routes: Routes = [
-  { path: '', component: PageComponent },
+  { 
+    path: '', 
+    component: PageComponent,
+    data: { icon: 'menu', text: 'Menu' }
+  },
   {
     path: 'cursos', loadChildren: () => import('./cursos/cursos.module')
       .then(m => m.CursosModule)

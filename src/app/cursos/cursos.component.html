@@ -1,5 +1,8 @@
-<div class="padding-top"></div>
 
-<div class="container">
-  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso"></app-card-cursos>
+
+<div class="container cursos">
+  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso" (editarCurso)="goTo($event)"></app-card-cursos>
+
 </div>
+
+<div class="criar-curso" (click)="goTo('cursos/criar-curso')">+</div>

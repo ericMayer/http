@@ -3,16 +3,17 @@
   align-items: center;
   padding: 5px;
   cursor: pointer;
+
+  div {
+    display: flex;  
+    align-items: center;
+  }
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: static;
 }
 
 .nav-button {
@@ -22,7 +23,7 @@
   border: none;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   outline: var(--color-menu);
   color: var(--color-dark);
@@ -32,17 +33,6 @@
   }
 
   .nav-text {
-    font: var(--font-text);
-    font-weight: 700;
-  }
-}
-
-.container-title {
-  display: flex;
-  background: var(--color-blue);
-
-  .title-page {
-    margin: 10px auto 0 auto;
     font: var(--font-text);
     font-weight: 700;
   }
