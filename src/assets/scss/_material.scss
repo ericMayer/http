@@ -37,6 +37,23 @@
   }
 }
 
+.snack-bar-success {
+  margin-top: 200px !important;
+  background: var(--color-menu-open);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
+
 .mat-input-element {
   text-align: inherit !important;
 }

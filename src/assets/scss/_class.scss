@@ -44,7 +44,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -55,13 +55,33 @@ input[type=number] {
   border-radius: 8px;
   border: none;
   background: var(--color-menu-open);
+  outline: var(--color-menu-open);
   color: var(--color-white);
   font: var(--font-text);
   font-weight: 700;
   cursor: pointer;
+}
 
-  &:disabled {  
-    background: rgba(#921FC7, 0.5);
-    cursor: default;
-  }
+.disabled {
+  background: rgba(#921fc7, 0.5) !important;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(#921fc7, 0.5);
+  border-radius: 6px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--color-menu-open); 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-menu-open); 
 }

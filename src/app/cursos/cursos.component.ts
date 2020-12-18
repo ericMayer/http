@@ -19,6 +19,7 @@ export class CursosComponent implements OnInit {
 
   public cursos: Observable<Curso[]>;
   public error: Subject<boolean> = new Subject();
+  public isErrorLoadCursos: boolean;
 
   constructor(
     private cursosService: CursosService,
@@ -35,6 +36,7 @@ export class CursosComponent implements OnInit {
     this.cursos = this.cursosService.getCursos()
       .pipe(
         catchError(() => {
+          this.isErrorLoadCursos = true;
           this.messageModalService.openModalError('Ocorreu um erro ao carregar os cursos, por favor tente novamente mais tarde.');
           return EmptyObservable.create<Curso[]>();
         })

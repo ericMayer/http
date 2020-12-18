@@ -24,6 +24,7 @@ export class CustomInputComponent implements ControlValueAccessor {
   @Input() icon: string;
   @Input() tooltip: string;
   @Input() mask: string;
+  @Input() minlength: string;
   @Input() maxlength: string;
   @Input() isRequired: boolean;
   @Input() error: string;
@@ -75,7 +76,8 @@ export class CustomInputComponent implements ControlValueAccessor {
   setInvalid() {  
     if(this.type == 'email' && this.val) this.validEmail();
     else if(this.isRequired && !this.val) this.setError();
-    else if (this.maxlength && this.val && this.val.length != Number(this.length)) this.setError(`Por favor, digite um ${this.label} válido.`);
+    else if (this.minlength && this.val && this.val.length < Number(this.minlength)) this.setError(`O mínimo de caracteres aceito é ${this.minlength}.`);
+    else if (this.maxlength && this.val && this.val.length > Number(this.maxlength)) this.setError(`A ${this.label.toLowerCase().replace(/:/g, '')} máxima permitida é 900 horas.`);
     else this.resetInvalid();
   }
 

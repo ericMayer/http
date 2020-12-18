@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json-cursos": "json-server src/assets/json/cursos.json --watch"
+    "json-cursos": "json-server cursos.json --watch"
   },
   "private": true,
   "dependencies": {

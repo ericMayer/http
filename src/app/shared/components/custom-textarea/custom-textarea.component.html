@@ -3,7 +3,7 @@
   <mat-label class="label">{{ getLabel() }}</mat-label>
 
   <textarea class="textarea" matInput [placeholder]="placeholder" [type]="type" (input)="setInvalid()"
-    (focusout)="setInvalid()" ngDefaultControl [(ngModel)]="value" [required]="isRequired"></textarea>
+    (focusout)="setInvalid()" ngDefaultControl [(ngModel)]="value" [required]="isRequired" [minlength]="minlength"></textarea>
 
 </mat-form-field>
 

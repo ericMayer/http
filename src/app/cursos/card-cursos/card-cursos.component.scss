@@ -28,10 +28,12 @@
     font: var(--font-text);
     color: var(--color-dark);
     font-weight: 700;
+    overflow-wrap: break-word;
   }
 
   .curso-descricao {
     color: var(--color-dark);
+    overflow-wrap: break-word;
   }
 }
 

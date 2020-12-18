@@ -25,6 +25,7 @@ export class CustomTextareaComponent {
   @Input() icon: string;
   @Input() tooltip: string;
   @Input() mask: string;
+  @Input() minlength: string;
   @Input() maxlength: string;
   @Input() isRequired: boolean;
   @Input() error: string;
@@ -75,6 +76,7 @@ export class CustomTextareaComponent {
   setInvalid() {    
     if(this.type == 'email' && this.val) this.validEmail();
     else if(this.isRequired && !this.val) this.setError();
+    else if (this.minlength && this.val && this.val.length < Number(this.minlength)) this.setError(`Por favor, o mínimo de caracteres aceito é ${this.minlength}.`);
     else if (this.maxlength && this.val && this.val.length != Number(this.length)) this.setError(`Por favor, digite um ${this.label} válido.`);
     else this.resetInvalid();
   }
