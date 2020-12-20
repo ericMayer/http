@@ -85,17 +85,20 @@ export class FormCursoComponent implements OnInit {
   }
 
   private editarCurso(): void {
-  
+    this.cursosService.editarCurso(this.curso).subscribe(() => 
+      this.showSnackBar('O curso foi atulizado com sucesso!', true)
+    , () =>  this.showSnackBar('Ocorreu um erro ao atualizar o curso, por favor tente mais tarde.', false, true));
   }
 
   private criarCurso(): void {
     this.cursosService.criarCurso(this.curso).subscribe(() => 
       this.showSnackBar('O curso foi criado com sucesso!', true)
-    );
+    ), () => this.showSnackBar('Ocorreu um erro ao criar o curso, por favor tente mais tarde.', false, true);
   }
 
-  private showSnackBar(message: string, back: boolean): void {
-    this.messageModalService.openModalSuccess(message);
+  private showSnackBar(message: string, back: boolean, error?: boolean): void {
+    if (error) this.messageModalService.openModalError(message);
+    else this.messageModalService.openModalSuccess(message);
     if (back) this.utilsService.goTo('cursos');
   } 
 }

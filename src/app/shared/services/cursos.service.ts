@@ -26,7 +26,7 @@ export class CursosService {
   }
 
   public editarCurso(curso: Curso): Observable<Curso> {
-    if (curso) return this.http.put(`cursos`, curso).pipe(take(1));
+    if (curso && curso.id) return this.http.put(`cursos/${curso.id}`, curso).pipe(take(1));
   }
 
 }

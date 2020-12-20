@@ -12,7 +12,7 @@
       "nome": "CSS - Flexbox",
       "descricao": "Aprenda a criar layouts do zero utilizando CSS Flexbox, para criação de sites responsivos. No curso será ensinado as principais propriedades do Flexbox.",
       "cargaHoraria": 5,
-      "preco": 150
+      "preco": 1500.01
     },
     {
       "id": 3,
@@ -50,10 +50,10 @@
       "id": 7
     },
     {
-      "nome": "Curso de JavaScript Completo",
+      "nome": "Curso de JavaScript Completo 2",
       "descricao": "Curso muito bom com muitas aulas para aprimorar o conhecimento em JavaScript e ter uma base sólida.",
       "cargaHoraria": 20,
-      "preco": 22.22,
+      "preco": 222.22,
       "id": 8
     }
   ]
