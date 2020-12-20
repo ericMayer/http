@@ -44,7 +44,6 @@ export class FormCursoComponent implements OnInit {
   private getCursoById(): void {
     if (this.idCurso) {
       this.cursosService.getCursoById(this.idCurso)
-        .pipe(take(1))
         .subscribe((curso: Curso) => this.curso = curso);
     }
   }

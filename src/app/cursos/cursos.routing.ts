@@ -8,17 +8,17 @@ const routes: Routes = [
   {
     path: '',
     component: CursosComponent,
-    data: { titlePage: 'Cursos', icon: 'arrow_back', text: 'Voltar' }
+    data: { titlePage: 'Cursos' }
   },
   {
     path: 'criar-curso',
     component: FormCursoComponent,
-    data: { titlePage: 'Criar Curso', icon: 'arrow_back', text: 'Voltar' }
+    data: { titlePage: 'Criar Curso' }
   },
   {
     path: 'editar-curso/:idCurso',
     component: FormCursoComponent,
-    data: { titlePage: 'Editar Curso', icon: 'arrow_back', text: 'Voltar' }
+    data: { titlePage: 'Editar Curso' }
   }
 ];
 

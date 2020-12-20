@@ -5,7 +5,7 @@
   cursor: pointer;
 
   div {
-    display: flex;  
+    display: flex;
     align-items: center;
   }
 }
@@ -36,4 +36,26 @@
     font: var(--font-text);
     font-weight: 700;
   }
+}
+
+.padding-top {
+  padding-top: 70px;
+
+  @media screen and (max-width: 599px) {
+    padding-top: 62px;
+  }
+}
+
+.container-title {
+  display: flex;
+  background: var(--color-blue);
+}
+
+.title-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+  font: var(--font-text);
+  font-weight: 700;
 }
