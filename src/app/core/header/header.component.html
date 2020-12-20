@@ -1,22 +1,30 @@
 <nav class="nav">
   <mat-toolbar-row class="nav-button">
     <div class="container-header">
-      <div *ngIf="showMenu; else showArrowBack" (click)="openMenu.emit()">
-        <mat-icon class="nav-icon">
-          {{ icon }}
-        </mat-icon>
-        <p class="nav-text"> {{ text }}</p>
-      </div>
-
-      <ng-template #showArrowBack>
+      <div *ngIf="showArrowBack; else showMenu">
         <div (click)="back()">
           <mat-icon class="nav-icon">
-            {{ icon }}
+            arrow_back
           </mat-icon>
-          <p class="nav-text"> {{ text }}</p>
+          <p class="nav-text"> Voltar </p>
+        </div>
+      </div>
+
+      <ng-template #showMenu>
+        <div (click)="openMenu.emit()">
+          <mat-icon class="nav-icon">
+            menu
+          </mat-icon>
+          <p class="nav-text"> Menu </p>
         </div>
       </ng-template>
     </div>
 
   </mat-toolbar-row>
 </nav>
+
+<div class="padding-top container-title" *ngIf="titlePage">
+</div>
+
+<div class="title-page" *ngIf="titlePage"> {{ titlePage }} </div>
+

@@ -18,16 +18,15 @@ export class CursosService {
   }
 
   public getCursoById(idCurso: string): Observable<Curso> {
-    if (idCurso) return this.http.get(`cursos/${idCurso}`);
+    if (idCurso) return this.http.get(`cursos/${idCurso}`).pipe(take(1));
   }
-
 
   public criarCurso(curso: Curso): Observable<Curso> {
     if (curso) return this.http.post(`cursos`, curso).pipe(take(1));
   }
 
   public editarCurso(curso: Curso): Observable<Curso> {
-    if (curso) return this.http.put(`cursos`, curso).pipe(take(1));
+    if (curso && curso.id) return this.http.put(`cursos/${curso.id}`, curso).pipe(take(1));
   }
 
 }

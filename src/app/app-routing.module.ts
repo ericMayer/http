@@ -4,15 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageComponent } from './core/page/page.component';
 
 const routes: Routes = [
-  { 
-    path: '', 
-    component: PageComponent,
-    data: { icon: 'menu', text: 'Menu' }
-  },
   {
-    path: 'cursos', loadChildren: () => import('./cursos/cursos.module')
-      .then(m => m.CursosModule)
-  }
+    path: '',
+    component: PageComponent,
+    children: [
+      {
+        path: 'cursos', loadChildren: () => import('./cursos/cursos.module')
+          .then(m => m.CursosModule)
+      }
+    ]
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
