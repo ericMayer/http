@@ -5,6 +5,4 @@ export interface Curso extends Base {
   descricao?: string;
   cargaHoraria?: number;
   preco?: number;
-  cursosOpcionais?: Base[];
-  preRequisitos?: Base[];
 }

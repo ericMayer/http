@@ -14,11 +14,15 @@ export class MessageModalService {
     this.snackBar.open(message, 'Fechar', {
       panelClass: className,
       verticalPosition: 'top',
-      duration: 5000,
+      duration: 5000,  
     });
   }
 
   public openModalError(message: string): void {
     this.showModal(message, 'snack-bar-error');
+  }
+
+  public openModalSuccess(message: string): void {
+    this.showModal(message, 'snack-bar-success');
   }
 }

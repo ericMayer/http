@@ -1,4 +1,3 @@
-
 <mat-sidenav-container>
 
   <mat-sidenav #sidenav class="nav-list">
@@ -9,8 +8,15 @@
 
     <app-header (openMenu)="sidenav.toggle()"></app-header>
 
-    <main class="main-principal">
-      <router-outlet></router-outlet>
+
+
+    <main>
+
+      <router-outlet>
+      </router-outlet>
+
     </main>
+
   </mat-sidenav-content>
+
 </mat-sidenav-container>

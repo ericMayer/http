@@ -1,0 +1,68 @@
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--color-menu-open);
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--color-menu-open);
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: var(--color-red);
+}
+
+.ng-invalid.ng-touched {
+  .label {
+    color: var(--color-red);
+  }
+}
+
+.snack-bar-error {
+  margin-top: 200px !important;
+  background: var(--color-red);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
+
+.snack-bar-success {
+  margin-top: 200px !important;
+  background: var(--color-menu-open);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
+
+.mat-input-element {
+  text-align: inherit !important;
+}
+
+.textarea.mat-input-element {
+  resize: none;
+  height: 100px;
+}
+
+.mat-drawer-content {
+  height: 100vh !important;
+}

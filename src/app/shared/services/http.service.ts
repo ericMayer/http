@@ -15,4 +15,11 @@ export class HttpService {
     return this.http.get<T>(`${API}/${endPoint}`);
   }
 
+  public post<T>(endPoint: string, body: any): Observable<T> {
+    return this.http.post<T>(`${API}/${endPoint}`, body);
+  }
+
+  public put<T>(endPoint: string, body: any): Observable<T> {
+    return this.http.put<T>(`${API}/${endPoint}`, body);
+  }
 }

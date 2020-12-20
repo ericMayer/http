@@ -1,0 +1,11 @@
+<mat-form-field class="form-field" appearance="outline" [hideRequiredMarker]="true" [class.invalido]="invalid">
+
+  <mat-label class="label">{{ getLabel() }}</mat-label>
+
+  <input class="input" name="input" matInput [placeholder]="placeholder" [type]="type"
+    (input)="setInvalid()" (focusout)="setInvalid()" ngDefaultControl [(ngModel)]="value" [required]="isRequired" [mask]="mask" [minlength]="minlength" [maxlength]="maxlength">
+
+</mat-form-field>
+
+
+<mat-error> {{ error }} </mat-error>

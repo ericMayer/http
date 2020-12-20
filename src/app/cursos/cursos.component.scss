@@ -1,5 +1,26 @@
-.container {
-  margin: 70px 60px 60px 60px;
+.cursos {
   display: flex;
   flex-wrap: wrap;
+}
+
+.criar-curso {
+  margin-top: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-menu-open);
+  outline: var(--color-menu-open);
+  color: var(--color-white);
+  font: var(--font-subtitle);
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    right: 20px;
+  }
 }

@@ -15,7 +15,7 @@ import { PageComponent } from './core/page/page.component';
     AppComponent,
     MenuComponent,
     PageComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
