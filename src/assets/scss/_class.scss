@@ -1,8 +1,8 @@
 .container {
-  margin: 40px 60px 40px 60px;
+  padding: 40px 60px 40px 60px;
 
   @media screen and (max-width: 768px) {
-    margin: 40px 20px 40px 20px;
+    padding: 40px 20px 40px 20px;
   }
 }
 
@@ -48,7 +48,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.button-salvar {
+.button-default {
   width: auto;
   height: 40px;
   padding: 0 30px;
@@ -84,4 +84,10 @@ input[type="number"] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-menu-open); 
+}
+
+.title {
+  font: var(--font-title);
+  color: var(--color-dark);
+  margin-bottom: 40px;
 }
