@@ -9,6 +9,8 @@ import { MenuComponent } from './core/menu/menu.component';
 import { SharedModule } from './shared/modules/shared.module';
 import { MaterialModule } from './shared/modules/material.module';
 import { PageComponent } from './core/page/page.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { PageComponent } from './core/page/page.component';
     MenuComponent,
     PageComponent,
     HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
