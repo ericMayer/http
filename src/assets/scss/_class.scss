@@ -18,6 +18,7 @@
   width: 48px;
   height: 48px;
   border: none;
+  outline: var(--color-menu-open);
 }
 
 .invalid {
@@ -62,6 +63,20 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.button-cancel {
+  width: auto;
+  height: 40px;
+  padding: 0 30px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(#921fc7, 0.5);
+  outline: rgba(#921fc7, 0.5);
+  color: var(--color-white);
+  font: var(--font-text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .disabled {
   background: rgba(#921fc7, 0.5) !important;
   cursor: default !important;
@@ -84,10 +99,4 @@ input[type="number"] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-menu-open); 
-}
-
-.title {
-  font: var(--font-title);
-  color: var(--color-dark);
-  margin-bottom: 40px;
 }

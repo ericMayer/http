@@ -12,12 +12,15 @@ import { ReduceTextPipe } from '../pipes/reduceText.pipe';
 
 import { CustomInputComponent } from '../components/custom-input/custom-input.component';
 import { CustomTextareaComponent } from '../components/custom-textarea/custom-textarea.component';
+import { PopupConfirmacaoComponent } from '../components/popup-confirmacao/popup-confirmacao.component';
+
 
 
 @NgModule({
   declarations: [
     CustomInputComponent,
     CustomTextareaComponent,
+    PopupConfirmacaoComponent,
     ReduceTextPipe
   ],
   imports: [
@@ -34,6 +37,9 @@ import { CustomTextareaComponent } from '../components/custom-textarea/custom-te
     CustomTextareaComponent,
     ReduceTextPipe,
     NgxCurrencyModule
+  ],
+  entryComponents: [
+    PopupConfirmacaoComponent
   ]
 })
 export class SharedModule { }
