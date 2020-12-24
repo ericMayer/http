@@ -22,4 +22,8 @@ export class HttpService {
   public put<T>(endPoint: string, body: any): Observable<T> {
     return this.http.put<T>(`${API}/${endPoint}`, body);
   }
+
+  public delete<T>(endPoint: string): Observable<T> {
+    return this.http.delete<T>(`${API}/${endPoint}`);
+  }
 }

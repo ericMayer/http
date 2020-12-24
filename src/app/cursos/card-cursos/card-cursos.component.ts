@@ -10,6 +10,7 @@ export class CardCursosComponent {
 
   @Input() curso: Curso;
   @Output() editarCurso: EventEmitter<string> = new EventEmitter();
+  @Output() deletarCurso: EventEmitter<string> = new EventEmitter();
 
 
   public editar(id: String): void {

@@ -3,6 +3,11 @@ h1, h2, h3, img, ul, li, a, button, p, body {
   padding: 0;
 }
 
+h1, h2, h3 {
+  font-weight: normal;
+  font-size: unset;
+}
+
 img {
   display: block;
   max-width: 100%;

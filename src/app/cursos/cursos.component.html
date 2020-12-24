@@ -1,7 +1,7 @@
 
 
 <div class="container cursos">
-  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso" (editarCurso)="goTo($event)"></app-card-cursos>
+  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso" (editarCurso)="goTo($event)" (deletarCurso)="showPopupDeletar($event)"></app-card-cursos>
 
 </div>
 
