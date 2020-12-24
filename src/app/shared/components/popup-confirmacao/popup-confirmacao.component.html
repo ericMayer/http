@@ -1,0 +1,13 @@
+<button class="close-button" [matDialogClose]="false">x</button>
+
+<div class="container-popup">
+  <h1 class="title">{{ data?.title }}</h1>
+
+  <p class="message">{{ data?.message }}</p>
+
+  <div class="actions">
+    <button *ngIf="data?.cancel" class="button-cancel" [matDialogClose]="false">{{ data?.cancel }}</button>
+
+    <button *ngIf="data?.confirm" class="button-default" [matDialogClose]="true">{{ data?.confirm }}</button>
+  </div>
+</div>

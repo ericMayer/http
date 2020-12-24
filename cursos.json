@@ -7,19 +7,19 @@
       "cargaHoraria": 20,
       "preco": 300.5
     },
-    {
+{
       "id": 2,
       "nome": "CSS - Flexbox",
       "descricao": "Aprenda a criar layouts do zero utilizando CSS Flexbox, para criação de sites responsivos. No curso será ensinado as principais propriedades do Flexbox.",
       "cargaHoraria": 5,
-      "preco": 1500.01
+      "preco": 150.50
     },
     {
       "id": 3,
       "nome": "CSS - Grid Layout",
       "descricao": "Aprenda a criar layouts complexos utilizando a nova especificação de CSS.",
       "cargaHoraria": 5,
-      "preco": 150
+      "preco": 150.0
     },
     {
       "id": 4,
@@ -34,20 +34,6 @@
       "descricao": "Aprenda a utilizar o framework Angular 2+ para criar SPA - Single Page Application. \n Será ensinado desde o básico até o intermediário, no curso será utilizado o Material Design e outras libs para apresentação que podem ser usadas para facilitar o desenvolimento das aplicações no cotidiano.",
       "cargaHoraria": 25,
       "preco": 550.9
-    },
-    {
-      "nome": "ttttttttttttttttttttttttttttttttttttaaaaaaaaaaaaaaaaaaaaaa",
-      "descricao": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
-      "cargaHoraria": "11",
-      "preco": 22.22,
-      "id": 6
-    },
-    {
-      "nome": "ssssssssssssssssssssssssssssssssssss sssssssssss",
-      "descricao": "ssssssssssssssssss sssssssssssssssssss ssssssssssssssss sssssssssssssssssss",
-      "cargaHoraria": 1,
-      "preco": 0.01,
-      "id": 7
     },
     {
       "nome": "Curso de JavaScript Completo 2",

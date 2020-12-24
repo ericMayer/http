@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-white);
+}
+
+.title {
+  font: var(--font-title);
+  color: var(--color-dark);
+  margin-bottom: 40px;
+}
