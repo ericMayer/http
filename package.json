@@ -25,6 +25,7 @@
     "json-server": "^0.16.3",
     "material-icons": "^0.3.1",
     "ngx-currency": "^2.5.2",
+    "ngx-file-drop": "^10.1.1",
     "ngx-mask": "^11.1.4",
     "rxjs": "~6.5.5",
     "rxjs-compat": "^6.6.3",

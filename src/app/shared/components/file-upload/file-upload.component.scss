@@ -1,0 +1,57 @@
+.container-file {
+  .ngx-file-drop__content {
+    color: var(--color-menu-open) !important;
+  }
+
+  .ngx-file-drop__drop-zone {
+    border: 2px dotted var(--color-menu-open) !important;
+  }
+}
+
+.image {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  
+  .capa-text {
+    font: var(--font-input);
+    color: var(--color-menu-open);
+    margin-right: 20px;
+  }
+
+  img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 20px;
+  }
+}
+
+.image {
+  .ngx-file-drop__content {
+    color: var(--color-menu-open) !important;
+    height: 40px !important;
+  }
+
+  .ngx-file-drop__drop-zone {
+    border: none !important;
+    height: 40px !important;
+  }
+}
+
+.image {
+  .edit {
+    cursor: pointer;
+  }
+}
+
+.select-file {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .label-text {
+    font: var(--font-input);
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container-file">
+
+  <ng-container *ngIf="imageUrl; else selectFile">
+
+    <div class="image">
+
+      <p class="capa-text">Capa do curso</p>
+
+      <img [src]="imageUrl" alt="Arquivo selecionado">
+
+      <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+        (onFileLeave)="fileLeave($event)" accept=".png, .jpeg, .jpg">
+
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+
+          <mat-icon class="edit" (click)="openFileSelector()"> edit </mat-icon>
+
+        </ng-template>
+      </ngx-file-drop>
+
+    </div>
+
+  </ng-container>
+
+  <ng-template #selectFile>
+
+    <ngx-file-drop (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" accept=".png, .jpeg, .jpg">
+
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+
+        <div class="select-file" (click)="openFileSelector()">
+
+          <p class="label-file">Selecione uma capa para o curso, esse campo é opcional.</p>
+
+        </div>
+      </ng-template>
+
+    </ngx-file-drop>
+
+  </ng-template>
+
+
+</div>

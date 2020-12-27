@@ -1,4 +1,5 @@
 <div class="container">
+
   <app-custom-input [label]="'Nome do curso:'" [type]="'text'" [isRequired]="true" [placeholder]="'Digite o nome do curso'" [(ngModel)]="curso.nome" [minlength]="'4'">
   </app-custom-input>
 
@@ -26,6 +27,11 @@
   </mat-form-field>
 
   <mat-error> {{ getErrorMessage('preco') }} </mat-error>
+
+  <div class="margin-bottom"></div>
+
+
+  <app-file-upload></app-file-upload>
 
   <div class="margin-bottom"></div>
 
