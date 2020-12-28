@@ -1,7 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 import { FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
 
+import { Arquivo } from '../../interfaces/arquivo.interface';
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
@@ -11,11 +12,13 @@ import { FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
 export class FileUploadComponent {
 
   public files: NgxFileDropEntry[] = [];
-  public imageUrl: string | ArrayBuffer;
+
+  @Input() imageUrl: string | ArrayBuffer;
+  @Output() emitImage: EventEmitter<Arquivo> = new EventEmitter();
 
 
   constructor(
-  ) { 
+  ) {
   }
 
   public dropped(files: NgxFileDropEntry[]): void {
@@ -27,9 +30,17 @@ export class FileUploadComponent {
 
         fileEntry.file((file: File) => {
           reader.readAsDataURL(file);
-          reader.onload = () => this.imageUrl = reader.result;
+          reader.onload = () => {
+            this.imageUrl = reader.result;
+            this.sendFileSelected(file, reader.result);
+          }
         });
       }
     }
+  }
+
+  private sendFileSelected(file: File, image: string | ArrayBuffer): void {
+    const arquivo: Arquivo = { name: file.name, size: file.size, type: file.type, upload: new Date(), image: image };
+    this.emitImage.emit(arquivo);
   }
 }
