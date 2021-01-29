@@ -12,13 +12,14 @@ LazyLoading.
 
 Librarys utilizadas:
 
-ngx-mask - https://www.npmjs.com/package/ngx-mask
-ngx-currency - https://www.npmjs.com/package/ngx-currency
-ngx-file-drop - https://www.npmjs.com/package/ngx-file-drop
+ngx-mask - https://www.npmjs.com/package/ngx-mask <br>
+ngx-currency - https://www.npmjs.com/package/ngx-currency <br>
+ngx-file-drop - https://www.npmjs.com/package/ngx-file-drop <br>
 
 # API
 
-Executar comando json-server src/assets/json/cursos.json --watch ou npm run json-cursos
+Executar comando json-server src/assets/json/cursos.json --watch ou npm run json-cursos <br>
+Também foi utilizado a API: https://cdnjs.com/api
 
 # Executar Projeto
 
