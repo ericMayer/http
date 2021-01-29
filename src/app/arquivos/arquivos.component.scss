@@ -1,0 +1,36 @@
+.ngx-file-drop__content {
+  color: var(--color-menu-open) !important;
+}
+
+.ngx-file-drop__drop-zone {
+  border: 2px dotted var(--color-menu-open) !important;
+}
+
+.ngx-file-drop__content {
+  color: var(--color-menu-open) !important;
+  height: 40px !important;
+}
+
+.ngx-file-drop__drop-zone {
+  height: 80px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-file {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+
+  .label-text {
+    font: var(--font-input);
+  }
+}
+
+.download {
+  margin-left: 20px;
+}

@@ -1,8 +1,8 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
-import { ActivatedRoute, Event, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { take } from 'rxjs/operators';
 
+import { Arquivo } from '../../shared/interfaces/arquivo.interface';
 import { Curso } from '../../shared/interfaces/curso.interface';
 import { CursosService } from '../../shared/services/cursos.service';
 import { Error } from '../../shared/interfaces/error.interface';
@@ -101,4 +101,9 @@ export class FormCursoComponent implements OnInit {
     else this.messageModalService.openModalSuccess(message);
     if (back) this.utilsService.goTo('cursos');
   } 
+
+  public receiveImage(arquivo: Arquivo): void {
+    if (this.curso)
+      this.curso.arquivo = arquivo;
+  }
 }
