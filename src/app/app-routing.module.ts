@@ -12,6 +12,12 @@ const routes: Routes = [
       {
         path: 'cursos', loadChildren: () => import('./cursos/cursos.module')
           .then(m => m.CursosModule)
+      },
+      {
+        path: 'arquivos', loadChildren: () => import('./arquivos/arquivos.module').then(m => m.ArquivosModule)
+      },
+      {
+        path: 'bibliotecas', loadChildren: () => import('./bibliotecas/bibliotecas.module').then(m => m.BibliotecasModule)
       }
     ]
   },

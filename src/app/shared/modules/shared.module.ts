@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgxCurrencyModule } from "ngx-currency";
 import { NgxFileDropModule } from 'ngx-file-drop';
@@ -32,6 +33,7 @@ import { PopupConfirmacaoComponent } from '../components/popup-confirmacao/popup
     FormsModule,
     HttpClientModule,
     RouterModule,
+    ReactiveFormsModule,
     NgxCurrencyModule,
     NgxFileDropModule,
     NgxMaskModule.forRoot()
@@ -41,6 +43,7 @@ import { PopupConfirmacaoComponent } from '../components/popup-confirmacao/popup
     CustomTextareaComponent,
     FileUploadComponent,
     ReduceTextPipe,
+    ReactiveFormsModule,
     NgxCurrencyModule
   ],
   entryComponents: [

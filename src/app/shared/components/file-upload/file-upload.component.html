@@ -24,7 +24,7 @@
 
   <ng-template #selectFile>
 
-    <ngx-file-drop (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" accept=".png, .jpeg, .jpg">
+    <ngx-file-drop (onFileDrop)="dropped($event)" (onFileOver)="dropped($event)" (onFileLeave)="dropped($event)" accept=".png, .jpeg, .jpg">
 
       <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
 

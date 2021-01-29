@@ -1,3 +1,5 @@
+import { NgxFileDropEntry } from 'ngx-file-drop';
+
 export interface Arquivo {
   name?: string;
   size?: number;
