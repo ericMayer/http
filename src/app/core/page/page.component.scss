@@ -1,0 +1,17 @@
+.nav-list {
+  margin-top: 64px;
+  width: 150px;
+  background: var(--color-menu-open);
+  font: var(--font-text);
+  font-weight: 700;
+
+  a {
+    color: var(--color-dark);
+  }
+
+  @media screen and (max-width: 599px) {
+    margin-top: 56px;
+  }
+}
+
+

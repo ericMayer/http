@@ -1,0 +1,13 @@
+<mat-card class="card-cursos">
+  <div class="card-header">
+    <p class="curso-nome"> {{ curso?.nome | reduceText : 22 }} </p>
+    <p class="curso-descricao"> {{ curso?.descricao | reduceText : 100 }}</p>
+  </div>
+
+  <div class="card-content"></div>
+
+  <div class="card-actions">
+    <mat-icon class="edit" (click)="editar(curso?.id)"> edit </mat-icon>
+    <mat-icon class="delete" (click)="deletarCurso.emit(curso?.id)"> delete </mat-icon>
+  </div>
+</mat-card>

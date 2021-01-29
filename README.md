@@ -1,27 +1,29 @@
-# Http
+Projeto baseado no conteúdo do módulo de http do curso de Angular 2+ da Loiane (https://loiane.training/curso/angular).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+Foi utilizado o Material Design no projeto, json-server e um back-end em Node apenas para fins de aprendizado no upload e download de arquivos.
 
-## Development server
+Outras tecnologias, metodologias e padrões que foram usados:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+CSS;
+HTML 5;
+SCSS;
+Flexbox;
+LazyLoading.
 
-## Code scaffolding
+Librarys utilizadas:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ngx-mask - https://www.npmjs.com/package/ngx-mask
+ngx-currency - https://www.npmjs.com/package/ngx-currency
+ngx-file-drop - https://www.npmjs.com/package/ngx-file-drop
 
-## Build
+# API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Executar comando json-server src/assets/json/cursos.json --watch ou npm run json-cursos
 
-## Running unit tests
+# Executar Projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `npm run start` ou `ng serve --proxy-config proxy.conf.json` na pasta do projeto, para funcionar corretamente as configurações do proxy e funciona correto com o backend.
 
-## Running end-to-end tests
+# Back-end utilizado em Node
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para rodar o servidor dentro da pasta do server, executar o comando `npm run start` ou node src/index.js

@@ -1,0 +1,18 @@
+:root {
+  --font-primary: Roboto;
+  --font-secondary: Nunito;
+
+  --color-menu: #A85FE8;
+  --color-dark: #222222;
+  --color-white: #FAFAFC;
+  --color-menu-open: #921FC7;
+  --color-blue: #2F0FF9;
+  --color-red: #FF273E;
+
+  --font-title: 2.5rem/2.7rem var(--font-primary);
+  --font-subtitle: 1.8rem/2rem var(--font-primary);
+  --font-text: 1.3rem/1.5rem var(--font-secondary);
+  --font-input: 1rem/1.3rem var(--font-secondary);
+
+  --message-font-size: 1.2rem/1.4rem;
+}

@@ -1,0 +1,112 @@
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--color-menu-open);
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 10px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--color-menu-open);
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: var(--color-red);
+}
+
+.ng-invalid.ng-touched {
+  .label {
+    color: var(--color-red);
+  }
+}
+
+.snack-bar-error {
+  background: var(--color-red);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
+
+.snack-bar-success {
+  background: var(--color-menu-open);
+
+  .mat-simple-snackbar {
+    color: var(--color-dark);
+    font-size: var(--message-font-size);
+    font-weight: 700;
+  }
+
+  .mat-button {
+    color: var(--color-white);
+    font-size: var(--message-font-size);
+    font-weight: bold;
+  }
+}
+
+.mat-input-element {
+  text-align: inherit !important;
+}
+
+.textarea.mat-input-element {
+  resize: none;
+  height: 100px;
+}
+
+.mat-drawer-content {
+  height: 100vh !important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: var(--color-menu-open);
+}
+
+.mat-progress-bar-buffer {
+    background: var(--color-white);
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background: var(--color-menu-open);
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background: var(--color-menu-open);
+}
+
+.mat-sort-header-content {
+  font: 700 var(--font-input);
+  color: var(--color-menu-open);
+}
+
+.mat-cell {
+  font: var(--font-input);
+  color: var(--color-dark);
+}
+
+.mat-paginator {
+  color: var(--color-dark);
+}
+
+.mat-select-value {
+  color: var(--color-dark);
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: var(--color-menu-open);
+}
+
+.mat-select-panel .mat-option {
+  color: var(--font-dark) !important;
+}
+
+.mat-sort-header-arrow {
+  color: var(--color-menu-open);
+}

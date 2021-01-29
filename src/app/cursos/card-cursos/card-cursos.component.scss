@@ -1,0 +1,54 @@
+:host {
+  .card-cursos {
+    margin-bottom: 20px;
+    width: 320px;
+    height: 190px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: auto;
+      min-width: 260px;
+    }
+  }
+}
+
+.card-cursos {
+  position: relative;
+}
+
+.card-header {
+  margin-top: 10px !important;
+  .curso-nome {
+    margin-bottom: 15px;
+    font: var(--font-text);
+    color: var(--color-dark);
+    font-weight: 700;
+    overflow-wrap: break-word;
+  }
+
+  .curso-descricao {
+    color: var(--color-dark);
+    overflow-wrap: break-word;
+  }
+}
+
+.card-actions {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+
+  .edit {
+    cursor: pointer;
+    color: var(--color-menu-open);
+  }
+
+  .delete {
+    cursor: pointer;
+    color: var(--color-red);
+  }
+}

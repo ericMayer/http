@@ -1,0 +1,27 @@
+<div class="container">
+
+  <ngx-file-drop (onFileDrop)="dropped($event)" (onFileOver)="dropped($event)" (onFileLeave)="dropped($event)">
+
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+
+      <div class="select-file" (click)="openFileSelector()">
+
+        <p class="label-file" #filesName>Selecione ou arraste um arquivo ou mais.</p>
+
+      </div>
+    </ng-template>
+
+  </ngx-file-drop>
+
+  <div style="margin-top: 20px"></div>
+
+  <mat-progress-bar mode="determinate" bufferValue="100" [value]="progress" *ngIf="progress"></mat-progress-bar>
+
+
+  <div style="margin-top: 20px"></div>
+
+  <button type="button" class="button-default" (click)="uploadFile()" [class.disabled]="!files?.size">Enviar</button>
+
+  <button type="button" class="button-default download" (click)="downloadFile()">Download</button>
+
+</div>

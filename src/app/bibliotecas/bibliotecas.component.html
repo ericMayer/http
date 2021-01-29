@@ -1,0 +1,37 @@
+<section class="container">
+
+  <mat-form-field class="form-field">
+
+    <mat-label class="label">Pesquisar</mat-label>
+
+    <input matInput class="input" name="input" matInput placeholder="Exemplo: Angular" type="text" ngDefaultControl #input [formControl]="search">
+
+  </mat-form-field>
+
+  <button class="button-default" [class.disabled]="invalidSearch()" (click)="getTextSearch()">Pesquisar</button>
+
+  <div class="mat-elevation-z8 table">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+        <td mat-cell *matCellDef="let lib"> {{ lib?.name }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="version">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Versão </th>
+        <td mat-cell *matCellDef="let lib"> {{ lib?.version }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let lib; columns: columns"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">Nenhum resultado encontrado para: <strong>{{ search?.value }}</strong> </td>
+      </tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 20, 30, 40, 50]"></mat-paginator>
+  </div>
+
+</section>

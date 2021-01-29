@@ -1,0 +1,22 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav class="nav-list" [autoFocus]="false">
+    <app-menu (openMenu)="sidenav.toggle()"></app-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <app-header (openMenu)="sidenav.toggle()"></app-header>
+
+
+
+    <main>
+
+      <router-outlet>
+      </router-outlet>
+
+    </main>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

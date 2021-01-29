@@ -1,0 +1,8 @@
+
+
+<div class="container cursos">
+  <app-card-cursos *ngFor="let curso of cursos | async" [curso]="curso" (editarCurso)="goTo($event)" (deletarCurso)="showPopupDeletar($event)"></app-card-cursos>
+
+</div>
+
+<div class="criar-curso" (click)="goTo('cursos/criar-curso')" [class.disabled]="isErrorLoadCursos">+</div>

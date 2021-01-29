@@ -1,0 +1,32 @@
+.popup-confirmacao {
+  position: relative !important;
+
+  .mat-dialog-container {
+    padding: 0;
+  }
+}
+
+.container-popup {
+  padding: 40px 30px;
+}
+
+.title {
+  font: var(--font-subtitle);
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+
+.message {
+  font: var(--font-text);
+  padding-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button-cancel {
+    margin-right: 20px;
+  }
+}

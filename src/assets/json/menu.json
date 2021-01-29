@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Cursos",
+    "route": "/cursos"
+  },
+  {
+    "title": "Arquivos",
+    "route": "/arquivos"
+  },
+  {
+    "title": "Bibliotecas",
+    "route": "/bibliotecas"
+  }
+]
