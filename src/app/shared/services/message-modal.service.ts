@@ -13,8 +13,8 @@ export class MessageModalService {
   private showModal(message: string, className: string): void {
     this.snackBar.open(message, 'Fechar', {
       panelClass: className,
-      verticalPosition: 'top',
-      duration: 5000,  
+      verticalPosition: 'bottom',
+      duration: 3000,  
     });
   }
 

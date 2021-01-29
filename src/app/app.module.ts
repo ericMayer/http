@@ -11,15 +11,14 @@ import { MaterialModule } from './shared/modules/material.module';
 import { PageComponent } from './core/page/page.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
-
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     MenuComponent,
     PageComponent,
     HeaderComponent,
     PageNotFoundComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
