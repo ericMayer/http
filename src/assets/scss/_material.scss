@@ -80,3 +80,33 @@
 .mat-form-field-appearance-legacy .mat-form-field-underline {
   background: var(--color-menu-open);
 }
+
+.mat-sort-header-content {
+  font: 700 var(--font-input);
+  color: var(--color-menu-open);
+}
+
+.mat-cell {
+  font: var(--font-input);
+  color: var(--color-dark);
+}
+
+.mat-paginator {
+  color: var(--color-dark);
+}
+
+.mat-select-value {
+  color: var(--color-dark);
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: var(--color-menu-open);
+}
+
+.mat-select-panel .mat-option {
+  color: var(--font-dark) !important;
+}
+
+.mat-sort-header-arrow {
+  color: var(--color-menu-open);
+}

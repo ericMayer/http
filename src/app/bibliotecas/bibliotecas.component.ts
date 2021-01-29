@@ -1,7 +1,10 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
+
+import { Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map, tap } from 'rxjs/operators';
 
 import { BibliotecasService } from '../shared/services/bibliotecas.service';
 import { TranslateService } from'../shared/services/translate.service';
@@ -16,7 +19,7 @@ import { FormControl } from '@angular/forms';
   templateUrl: './bibliotecas.component.html',
   styleUrls: ['./bibliotecas.component.scss']
 })
-export class BibliotecasComponent implements OnInit, AfterViewInit {
+export class BibliotecasComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -26,6 +29,7 @@ export class BibliotecasComponent implements OnInit, AfterViewInit {
   public dataSource: MatTableDataSource<Biblioteca>;
   public columns: string[];
   public search: FormControl;
+  public subscription$: Subscription;
 
   constructor(
     private bibliotecasService: BibliotecasService,
@@ -35,7 +39,8 @@ export class BibliotecasComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.getBibliotecas();
+    this.getBibliotecasBySearch();
+    this.searchObserveChanges();
   }
 
   ngAfterViewInit() {
@@ -44,22 +49,43 @@ export class BibliotecasComponent implements OnInit, AfterViewInit {
     this.translateService.translatePaginator(this.dataSource.paginator);
   }
 
+  ngOnDestroy() {
+    this.subscription$.unsubscribe();
+  }
+
   private initVariables(): void {
-    this.columns = ['nome', 'versão'];
+    this.columns = ['name', 'version'];
     this.bibliotecas = { results: [] };
     this.search = new FormControl();
     this.dataSource = new MatTableDataSource();
   }
 
-  private getBibliotecas(): void {
-    this.bibliotecasService.searchByName().subscribe((bibliotecas: Bibliotecas) => {
+  private searchObserveChanges(): void {
+    this.subscription$ = this.search.valueChanges.pipe(
+      map((texto: string) => texto.trim()),
+      filter((texto: string) => texto && texto.length > 1 || texto === ''),
+      debounceTime(300),
+      distinctUntilChanged(),
+      tap((texto: string) => this.getBibliotecasBySearch(texto)),
+    ).subscribe();
+  }
+
+  private getBibliotecasBySearch(texto?: string): void {
+    this.bibliotecasService.searchByName(texto).subscribe((bibliotecas: Bibliotecas) => {
       this.bibliotecas = bibliotecas;
       this.dataSource.data = bibliotecas.results;
     });
   }
 
   public getTextSearch(): void {
-    console.log(this.search);
+    if (this.search && this.search.value && this.search.value.length > 1) { 
+      this.search.value.trim();
+      this.getBibliotecasBySearch(this.search.value);
+    }
+  }
+
+  public invalidSearch(): boolean {
+    return !this.search || !this.search.value || this.search.value.length <= 1;
   }
 }
 
