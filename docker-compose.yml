@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  angular-http:
+    image: angular-http
+    build: .
+    ports:
+      - 8081:80
