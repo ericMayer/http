@@ -28,3 +28,7 @@ Execute `npm run start` ou `ng serve --proxy-config proxy.conf.json` na pasta do
 # Back-end utilizado em Node
 
 Para rodar o servidor dentro da pasta do server, executar o comando `npm run start` ou node src/index.js
+
+# Hospedagem
+
+Foi utilizado o firebase gratuito para fazer hospedagem do projeto, porém não é possível executar todas as funcionalidades do projeto, apenas sendo possível fazer a pesquisa em Bibliotecas que está usando uma API externa, para completo funcionamento seguir os passos descritos acima.
